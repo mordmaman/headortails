@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Head or Tails</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    <script type="text/javascript">
+
+       function changeImage() {
+            
+            var rand=Math.floor(Math.random()*11);
+        
+                if (rand % 2 == 0)
+                {
+                    document.getElementById("imgClickAndChange").src = "http://www.earlylearninghq.org.uk/wp-content/uploads/2010/06/ten22.jpg";
+                 
+                }
+                else 
+                {
+                    document.getElementById("imgClickAndChange").src = "http://www.earlylearninghq.org.uk/wp-content/uploads/2010/06/ten2-22.jpg";
+                    
+                }
+                
+                setTimeout(function(){ document.getElementById("imgClickAndChange").src = "http://www.abc.net.au/news/image/954416-3x2-940x627.jpg"; }, 1000);
+            }
+
+    </script>
+</head>
+
+
+<body>
+    <div class="container">
+        
+        <div class="page-header">
+            <h1 class="text-center">Head or Tails?</h1>
+        </div>
+        <br>
+        
+            <h2 class="text-center">Click the image and see if you get head or tails!</h2>
+            <br>
+            <img alt="questionmark" src="http://www.abc.net.au/news/image/954416-3x2-940x627.jpg" 
+             id="imgClickAndChange" onclick="changeImage()" class="center-block img-circle" width="230" height="230"/>
+             
+             
+    </div><!--closes container-->
+</body>
+</html>
+
